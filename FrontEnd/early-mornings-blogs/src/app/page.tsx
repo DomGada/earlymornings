@@ -17,9 +17,10 @@ export default function Home() {
   const [panel,setPanel] = useState("home")
   return (
     <main>
-      <Navbar />
+      <Navbar setPanel={setPanel} />
+      <h1 className={myfont.className+" text-4xl flex flex-col items-center mt-5"}>Early Mornings</h1>
       <div className="flex min-h-screen flex-col items-center p-24">
-        <h1 className={myfont.className}>The Ever Project</h1>
+        
         {panel == "posts" &&<Posts />}
       </div>
     </main>
